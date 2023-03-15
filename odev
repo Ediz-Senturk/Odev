@@ -12,15 +12,15 @@
 
 using namespace std;
 
-int find_smallest(int arr[], int n) {
-    int smallest = INT_MAX;
+int bulenkucuk(int arr[], int n) {
+    int enkucuk = INT_MAX;
     for (int i = 0; i < n; i++) {
-        if (arr[i] < smallest) {
-            smallest = arr[i];
+        if (arr[i] < enkucuk) {
+            enkucuk = arr[i];
         }
     }
 }
-    return smallest;
+    return enkucuk;
     
     
 3.Aşağıda bir dizi içerisinde arama yapan kod parçası verilmiştir. Buna göre aşağıda belirtilençalışma zamanlarını hesaplayınız.Hesaplama adımlarınızı açıklayınız.a)En iyib)Ortalama c)En kötü
