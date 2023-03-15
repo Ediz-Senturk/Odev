@@ -1,27 +1,30 @@
 1.Algoritmayı neden analiz ederiz? Algoritmaanalizini nasılyaparız? Açıklayınız.
 
 
+Neden Analiz Ederiz?
+Yazdığımız algoritmanın performansını bilmek isteriz farklı algoritmalarla karşılaştırmak isteriz ve daha iyisi mümkün mü sorusuna ancak analiz yaparak cevap verebiliriz.
 
 
-
-
-
+Nasıl Yaparız?
+Matematiksel olarak ifade edebileceğimiz donanımsal ve sistemsel bağımlılığı olmayan Büyük O Notasyonunu kullanabiliriz.
+ 
 
 2.Bir dizi içerisindeki en küçük elemanı bulan bir fonksiyon kodu yazınız. Yazdığınız fonksiyonun yürütme zamanını gösteren T(n) bağıntısını belirleyiniz.
 
 
-using namespace std;
+a) En İyi:
+En iyi durumda hedef değer dizinin ilk elemanında bulunur bu nedenle algoritmanın hedef değerin indexini döndürmeden önce yalnızca bir karşılaştırma yapmamız gerekir en iyi durum da O(1) olur.
 
-int bulenkucuk(int arr[], int n) {
-    int enkucuk = INT_MAX;
-    for (int i = 0; i < n; i++) {
-        if (arr[i] < enkucuk) {
-            enkucuk = arr[i];
-        }
-    }
-}
-    return enkucuk;
-    
+b) Ortalama:
+Ortalama durumda hedef değerin giriş dizisinde rastgele yerleştirildiğini düşünürsek ortalama olarak hedef değeri bulmadan önce giriş dizisindeki öğelerin yarısını incelemeliyiz bu yüzden ortalama O(N/2)'dir, bu da O(N) ye eşit olur.
+
+c) En Kötü:
+En kötü durumda hedef değer giriş dizisinde yoktur veya giriş dizisinin sonunda yer alır by durumda hedef değerin olmadığını belirlemeden veya dizinin sonunda bulmadan önce giriş dizisindeki her öğeyi incelememiz gerekiyor inceliyince de en kötü durum u O(N).
+
+Ω: O(1)
+Θ: O(N)
+O: O(N)
+
     
 3.Aşağıda bir dizi içerisinde arama yapan kod parçası verilmiştir. Buna göre aşağıda belirtilençalışma zamanlarını hesaplayınız.Hesaplama adımlarınızı açıklayınız.a)En iyib)Ortalama c)En kötü
 
