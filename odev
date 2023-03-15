@@ -1,0 +1,73 @@
+1.Algoritmayı neden analiz ederiz? Algoritmaanalizini nasılyaparız? Açıklayınız.
+
+
+
+
+
+
+
+
+2.Bir dizi içerisindeki en küçük elemanı bulan bir fonksiyon kodu yazınız. Yazdığınız fonksiyonun yürütme zamanını gösteren T(n) bağıntısını belirleyiniz.
+
+
+using namespace std;
+
+int find_smallest(int arr[], int n) {
+    int smallest = INT_MAX;
+    for (int i = 0; i < n; i++) {
+        if (arr[i] < smallest) {
+            smallest = arr[i];
+        }
+    }
+}
+    return smallest;
+    
+    
+3.Aşağıda bir dizi içerisinde arama yapan kod parçası verilmiştir. Buna göre aşağıda belirtilençalışma zamanlarını hesaplayınız.Hesaplama adımlarınızı açıklayınız.a)En iyib)Ortalama c)En kötü
+
+
+	int Search(int D[], int N, int sayi)
+			{
+			int i = 0;
+			while (i < N) {
+			if (D[i] == sayi) break;
+			i++;
+			}
+			
+			if (i < N) return i;
+			else return -1;
+		}
+    
+    4.5  adet  öğrencinin kişisel bilgilerini(ad,  soyad,  no,  ...)ve  adresbilgilerini  depolayanstruct tanımlayınız ve bu yapıyı kullanarak ekranda gösterenkodu yazınız.
+    
+    
+    #include <iostream>
+#include <string>
+using namespace std;
+
+struct ogrenci {
+    string isim;
+    string soyisim;
+    int no;
+    string adres;
+};
+
+int main() {
+    ogrenci ogrenciler[5];
+    
+    ogrenciler[0] = {"Ediz", "Senturk", 123, "Istanbul Beylikduzu"};
+    ogrenciler[1] = {"Ezgi", "Senturk", 321, "Istanbul Beylikduzu"};
+    ogrenciler[2] = {"Selcuk", "Yazar", 789, "Kirklareli Merkez"};
+    ogrenciler[3] = {"Gokce", "Erenler", 246, "Kirklareli Merkez"};
+    ogrenciler[4] = {"Dilan", "Alakus", 135, "Kirklareli Merkez"};
+    
+    for (int i = 0; i < 5; i++) {
+        cout << "ogrenci " << i+1 << ":" << endl;
+        cout << "isim: " << ogrenciler[i].isim << endl;
+        cout << "soyisim: " << ogrenciler[i].soyisim << endl;
+        cout << "no: " << ogrenciler[i].no << endl;
+        cout << "adres: " << ogrenciler[i].adres << endl << endl;
+    }
+    
+    return 0;
+}
